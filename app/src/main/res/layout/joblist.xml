@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white"
+    android:layout_marginHorizontal="20dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:padding="15dp"
+    android:layout_marginVertical="15dp">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintStart_toStartOf="@id/container"
+        android:id="@+id/purple_circle"
+        android:layout_margin="20dp"
+        android:src="@drawable/purple_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/action_image"
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintStart_toStartOf="@id/container"
+        android:layout_margin="30dp"
+        android:src="@drawable/apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/purple_circle"
+        app:layout_constraintTop_toTopOf="@id/purple_circle"
+        app:layout_constraintStart_toEndOf="@id/purple_circle"
+        android:id="@+id/nameOfJob"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/purple_circle"
+        android:layout_alignTop="@+id/purple_circle"
+        android:text="Product Designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/nameOfJob"
+        app:layout_constraintStart_toStartOf="@id/nameOfJob"
+        android:id="@+id/nameOfCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameOfJob"
+        android:layout_alignStart="@id/nameOfJob"
+        android:text="Google inc ."
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/nameOfCompany"
+        app:layout_constraintTop_toTopOf="@id/nameOfCompany"
+        app:layout_constraintStart_toEndOf="@id/nameOfCompany"
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameOfJob"
+        android:layout_toEndOf="@+id/nameOfCompany"
+        android:text="California, USA"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_marginEnd="25sp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/container"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/nameOfCompany"
+        app:layout_constraintStart_toStartOf="@id/container"
+        android:id="@+id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purple_circle"
+        android:layout_alignStart="@+id/purple_circle"
+        android:text="$15K/Mo"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_marginStart="19dp"
+        app:layout_constraintTop_toBottomOf="@id/salary"
+        app:layout_constraintStart_toStartOf="@id/container"
+        android:id="@+id/position"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/salary"
+        android:layout_alignStart="@id/salary"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/gray"
+        android:gravity="center"
+        android:text="Senior designer"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/position"
+        app:layout_constraintTop_toTopOf="@id/position"
+        app:layout_constraintStart_toEndOf="@id/position"
+        android:id="@+id/time"
+        android:layout_width="77dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/salary"
+        android:layout_toEndOf="@id/position"
+        android:background="@drawable/gray"
+        android:gravity="center"
+        android:text="Full time"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/time"
+        app:layout_constraintTop_toTopOf="@id/time"
+        app:layout_constraintStart_toEndOf="@id/time"
+        android:id="@+id/availability"
+        android:textColor="@color/black"
+        android:text="Full time"
+        android:background="@drawable/pink"
+        android:layout_width="77dp"
+        android:layout_height="25dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

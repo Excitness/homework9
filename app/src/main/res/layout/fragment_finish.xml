@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#E5E5E5"
+    tools:context=".FinishFragment">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:id="@+id/card_view"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_alignParentTop="true"
+          android:background="@drawable/ic_background">
+
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_below="@+id/ed_text1"
+             android:layout_marginHorizontal="29dp"
+             android:layout_marginTop="17dp"
+             android:background="@drawable/shape"
+             android:drawableStart="@drawable/icon_location"
+             android:hint="Osh, Kyrgyzstan"
+             android:paddingHorizontal="20dp"
+             android:textColor="@color/black"
+             android:textStyle="bold" />
+
+         <ImageView
+             android:id="@+id/back"
+             android:layout_width="48dp"
+             android:layout_height="46dp"
+             android:layout_marginStart="10dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             android:src="@drawable/ic_baseline_arrow_back_24" />
+
+         <EditText
+             android:id="@+id/ed_text1"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_below="@+id/back"
+             android:layout_marginHorizontal="29dp"
+             android:background="@drawable/shape"
+             android:drawableStart="@drawable/ic_baseline_search_24"
+             android:hint="Design"
+             android:paddingHorizontal="20dp"
+             android:textColor="@color/black"
+             android:textStyle="bold" />
+
+      </RelativeLayout>
+
+      <HorizontalScrollView
+          android:layout_marginTop="20dp"
+          android:layout_width="wrap_content"
+          android:layout_height="60dp">
+         <LinearLayout
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp">
+            <Button
+                android:id="@+id/recycler_for_story"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="80dp"
+                android:background="@drawable/blue_black"
+                android:drawableEnd="@drawable/ic_icon_filter"
+                android:paddingRight="8dp" />
+            <Button
+                android:padding="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:background="@drawable/gray"
+                android:text="Senior Designer"
+                android:textColor="@color/black" />
+
+            <Button
+                android:padding="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:background="@drawable/gray"
+                android:text="Designer"
+                android:textColor="@color/black" />
+
+            <Button
+                android:padding="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:background="@drawable/gray"
+                android:text="Full Time"
+                android:textColor="@color/black" />
+            <Button
+                android:padding="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="12sp"
+                android:background="@drawable/gray"
+                android:text="Full Time"
+                android:textColor="@color/black" />
+
+         </LinearLayout>
+
+      </HorizontalScrollView>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/item"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/scrol"
+          android:layout_marginTop="5dp"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:listitem="@layout/item_works" />
+   </LinearLayout>
+
+
+
+</ScrollView>
